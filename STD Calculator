@@ -1,0 +1,23 @@
+#SHORT TERM CALCULATOR
+
+rate_of_pay = (input("What is the partners rate of pay? $"))
+partnershare_factor = input("Is Partner eligible for PartnerShare? Y/N")
+
+#SALARY CALCULATIONS 100% 5 DAY WORK WEEK
+salary_weekly = float(rate_of_pay)*40
+salary_daily = salary_weekly/5
+
+#HOURLY CALCULATION 66.67% 7 DAY WORK WEEK
+hourly_cal = float(rate_of_pay)*40
+hourly_weekly = hourly_cal*.6667
+hourly_daily = hourly_weekly/7
+
+
+if partnershare_factor == 'Y':
+    print("\n")
+    print(f'Weekly = $ {salary_weekly:>7.2f}')
+    print(f'Daily = $ {salary_daily:>7.2f}')
+else:
+    print("\n")
+    print(f'Weekly = $ {hourly_weekly:>7.2f}')
+    print(f'Daily = ${hourly_daily:>7.2f}')
